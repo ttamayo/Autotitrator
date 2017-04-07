@@ -2,8 +2,8 @@ import RPi.GPIO as GPIO
 import time
 from time import sleep
 GPIO.setmode(GPIO.BCM)   # Enable boardcom numbers
-GPIO.setup(17,GPIO.OUT)  # Setting pump 1 to 17
-GPIO.setup(27,GPIO.OUT)  # Setting pump 2 to 27
+GPIO.setup(17,GPIO.OUT,initial=RPIO.LOW)  # Setting pump 1 to 17
+GPIO.setup(27,GPIO.OUT,initial=RPIO.LOW)  # Setting pump 2 to 27
 
 for i in range(3):     
     GPIO.output(17,1)

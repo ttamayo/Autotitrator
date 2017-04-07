@@ -2,7 +2,7 @@ import RPi.GPIO as GPIO
 import time
 from time import sleep
 GPIO.setmode(GPIO.BCM)  ## Enable Boardcom numbers
-GPIO.setup(17,GPIO.OUT) ## We set up the GPIO pin 17
+GPIO.setup(17,GPIO.OUT,initial=RPIO.LOW) ## We set up the GPIO pin 17 Turned off
 
 for i in range(3):    ## We do 3 iterations
     GPIO.output(17,1) ## Turn on

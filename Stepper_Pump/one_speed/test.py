@@ -1,4 +1,4 @@
-mport required libraries
+## import required libraries
 import sys
 import time
 import RPi.GPIO as GPIO
@@ -60,9 +60,9 @@ while True:
  
   # If we reach the end of the sequence
   # start again
-  if (StepCounter>=StepCount):
+  if StepCounter>=StepCount:
     StepCounter = 0
-  if (StepCounter<0):
+  if StepCounter<0:
     StepCounter = StepCount+StepDir
  
   # Wait before moving on

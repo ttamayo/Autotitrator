@@ -1,25 +1,25 @@
-# One peristaltic water pumps set-up
+# One steeper peristalic water pump set-up
 
 This folder contains in `test.py` that turns on and off a 
-peristaltic pump contolled by a power relay.
+stepper peristaltic pump contolled by a chip L293D.
 
 ## Materials:
 
 * Raspberry Pi.
-* Power supply.
-* Peristalic pump.
-* Jumpers.
-* Power relay. 
+* Chip L293D.
+* Peristalic pump
+*  
+
 
 ## Set up:
 
-|From: Raspberry   | To: Relay   |
+|From: Pump   | To: Chip   |
 |---|---|
 |G17| Input |   
 |3V3|3V3 |
 |GND|GND |
 
-|From: Power supply   | To: Pump   |
+|From: Power supply   | To: Dhip   |
 |---|---|
 |+|+ |
 

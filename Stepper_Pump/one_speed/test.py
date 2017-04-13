@@ -19,7 +19,6 @@ for pin in StepPins:
   GPIO.output(pin, False)
  
 # Define advanced sequence
-# as shown in manufacturers datasheet
 Seq = [[1,0,0,1],
        [1,0,0,0],
        [1,1,0,0],
@@ -43,7 +42,8 @@ else:
 StepCounter = 0
  
 # Start main loop
-while True:
+count = 1
+while (count < 30):
  
   print StepCounter,
   print Seq[StepCounter]
@@ -67,3 +67,6 @@ while True:
  
   # Wait before moving on
   time.sleep(WaitTime)
+  count = count + 1
+
+GPIO.cleanup()     

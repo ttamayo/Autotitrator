@@ -1,4 +1,5 @@
 from gpiozero import MCP3008
+import RPi.GPIO as GPIO
 import time
 import numpy as np
 
@@ -6,7 +7,7 @@ import numpy as np
 '''https://learn.sparkfun.com/tutorials/vernier-shield-hookup-guide?_ga=1.200530086.94916921.1488849082#resources-and-going-further'''
 
 
-def resistance(rawAnalogInputs):
+def resistance(rawAnalogInput):
   '''
   /* function to convert the raw Analog Input reading to a resistance value    
    * Schematic:
@@ -37,25 +38,38 @@ def steinharthart(resistance):
    *    of the Vernier interfaces
    * 
    */ '''
-  logRes = np.log(resistance) 
-  k0 = 0.00102119
-  k1 = 0.000222468
-  k2 = 0.000000133342
+   logRes = np.log(resistance) 
+   k0 = 0.00102119
+   k1 = 0.000222468
+   k2 = 0.000000133342
 
-  temp = 1 / (k0 + k1 * logRes + k2 * logRes*logRes*logRes)
-  temp = temp - 273.15 #  convert from Kelvin to Celsius 
-  return temp
+   temp = 1 / (k0 + k1 * logRes + k2 * logRes*logRes*logRes)
+   temp = temp - 273.15 #  convert from Kelvin to Celsius 
+   return temp
 
-if __name__ == 'main':
-   pot = MCP3008(0) ## assuming we used A0
-   print("current value",pot.value) ## It should be between 1 and 0
-   phSense = 0
-   refvoltage = 1.1
 
-   for i in range(10):
-      # 10 samples
-      time.sleep(10) ## we need to take values in certain intervals
-      rawAnalogReading = pot.value
-      thermistor = resistance(rawAnalogReading) # converts raw analog value to a resistance
-      Temp = steinharthart(thermistor) # applies the Steinhart-hart equation
-      print(Temp)
+
+### Controling vernier shield
+GPIO.setmode(GPIO.BCM)  ## Enable Boardcom numbers
+GPIO.setup(05,GPIO.OUT,initial=GPIO.LOW) ## We set up the GPIO pin 17 Turned off
+GPIO.setup(06,GPIO.OUT,initial=GPIO.LOW) ## We set up the GPIO pin 17 Turned off
+GPIO.output(05,1)
+GPIO.output(06,1)
+
+print("here")
+print("here")
+pot = MCP3008(0) ## assuming we used A0 form 0 to 5V
+                 ## If we excpect form -10 to 10 use 1
+print("current value",pot.value) ## It should be between 1 and 0
+refvoltage = 3.3
+
+for i in range(2):
+   # 10 samples
+   time.sleep(5) ## we need to take values in certain intervals
+   rawAnalogReading = pot.value
+   print(pot.value)
+   thermistor = resistance(rawAnalogReading) # converts raw analog value to a resistance
+   Temp = steinharthart(thermistor) # applies the Steinhart-hart equation
+   print(Temp)
+
+GPIO.cleanup()    

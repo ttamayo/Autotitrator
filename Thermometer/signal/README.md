@@ -16,24 +16,27 @@ peristaltic pump contolled by a power relay.
 |From: Raspberry   | To: MCP3008 (left) |
 |---|---|
 |3V3| 8 |   
-|3V3|7 |
-|GND| 1 |
-|GND| 2 |
-|GP10| 2 |
-|GP09| 4 |
-|GP11| 5 |
-|GP8| 2 |
+|GND|3 |
+|3V3| 1 |
+|3V3| 2 |
+|MISO| 4 |
+|GP09| 5 |
+|SCLC| 6 |
+|CE0| 7 |
 
 
 |From: Vernier Sensor | To: Raspberry  |
 |---|---|
 |5V | 5V |
+|3.3V | 3.3V |   
+|GND | GND | 
+|GND | GND | 
 
 |From: Vernier Sensor   | To: MCP3008 (right) |
 |---|---|
-|3.3V | 3.3V |   
-|GND | GND |   
-|AO | 7 |   
+|AO | 0 |   
+|AO | 1 |   
+
 
 ## Notes:
 

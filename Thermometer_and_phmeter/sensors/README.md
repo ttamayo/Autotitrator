@@ -1,11 +1,12 @@
-# Thermometer
+# Thermometer and pHmeter
 
-This folder contains in `test.py` that obtains the signal ofturns on and off a 
-peristaltic pump contolled by a power relay.
+This folder contains in `test.py` that obtains the signal of a pHmeter and
+thermometer.
 
 ## Materials:
 
 * Vernier temperature probe
+* pHmeter
 * Raspberry Pi.
 * Vernier Sensor Interface Shield.
 * Jumpers.
@@ -28,13 +29,13 @@ peristaltic pump contolled by a power relay.
 |From: Vernier Sensor | To: Raspberry  |
 |---|---|
 |5V | 5V |
+|3.3V | 3.3V |   
+|GND | GND |   
 
 |From: Vernier Sensor   | To: MCP3008 (right) |
 |---|---|
-|3.3V | 3.3V |   
-|GND | GND |   
-|AO | 7 |   
-|AO | 9 |   
+|A1 | 7 |   
+|A3 | 8 |   
 
 ## Notes:
 

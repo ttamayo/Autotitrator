@@ -55,7 +55,7 @@ Check out the physical address and add it to the script.
 
 ## Notes:
 
-* You might need to redifine the physical address.
+* You might need to redefine the physical address.
 
 ## References:
 

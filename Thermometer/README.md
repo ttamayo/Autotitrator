@@ -1,7 +1,7 @@
 # Thermometer
 
-This folder contains in `test.py` that obtains the signal ofturns on and off a 
-peristaltic pump contolled by a power relay.
+This folder contains in `test.py` that obtains the signal
+of a themperature/pHprobe.
 
 ## Materials:
 
@@ -34,8 +34,8 @@ peristaltic pump contolled by a power relay.
 
 |From: Vernier Sensor   | To: MCP3008 (right) |
 |---|---|
-|AO | 0 |   
-|AO | 1 |   
+|A1 | 0 |   
+|A2 | 1 |   
 
 
 ## Notes:

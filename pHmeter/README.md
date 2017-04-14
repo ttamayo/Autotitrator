@@ -1,5 +1,7 @@
 # pH meter 
 
+Note, it is the same set up as the thermometer.
+
 ## Materials:
 
 * Vernier temperature probe
@@ -31,8 +33,8 @@
 
 |From: Vernier Sensor   | To: MCP3008 (right) |
 |---|---|
-|AO | 0 |   
-|AO | 1 |   
+|A1 | 0 |   
+|A2 | 1 |   
 
 
 ## Notes:

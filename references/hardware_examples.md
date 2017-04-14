@@ -1,6 +1,6 @@
 # Other titrators 
 https://publiclab.org/notes/JSummers/12-02-2014/titraumatic-automated-titration-apparatus
-They used and syringe
+They used a syringe
 
 
 

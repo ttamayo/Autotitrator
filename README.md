@@ -1,5 +1,3 @@
 # Autotitrator
 
-This repo contains test of each of the different components 
-of an automatic titrator 
-controlled with a Raspberry Pi.
+This repository contains a set of tests for each of the different physical devices of your automatic titrator (i.e. pumps, pH meters, ...) which you control with your Raspberry Pi. 

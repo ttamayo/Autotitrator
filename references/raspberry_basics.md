@@ -1,9 +1,9 @@
 # Raspberry
 Things that you need
-1. Install Noobs in a SD bootable. (at least 8GB).
-2. Monitor with entry and cable HDMI
-3. Mouse
-4. Keyboard
+* Install Noobs in a SD bootable. (at least 8GB).
+* Monitor with entry and cable HDMI
+* Mouse
+* Keyboard
 https://www.raspberrypi.org/documentation/setup/README.md
 
 

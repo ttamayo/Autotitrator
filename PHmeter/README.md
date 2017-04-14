@@ -38,9 +38,9 @@
 ## Notes:
 
 * Please note that the small hole should be pointing towards the upper part. (See notebook).
-* Double check before clossing any circuit the wires, specially with the chip.
-* Check out the temperature of the chip (or not), it is possible that you burn it.
-* Be careful with the chip, do not handdle directly with the hands all pins.
+* (as always) Double check the wiring of any circuit you set up before connecting the circuit to a power source. Triple check if your circuit includes any chip!
+* Check the temperature of the chip - there is a chance that you will burn it, which is bad for your experimental setup.
+* Be careful with the chip. Pins tend to break when touched with bare hands, or even just stared at for too long 
 
 
 References:

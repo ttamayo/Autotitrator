@@ -3,27 +3,29 @@ import time
 from time import sleep
 
 GPIO.setmode(GPIO.BCM)      
-GPIO.setup(17,GPIO.OUT) # Direction
-GPIO.setup(27,GPIO.OUT) # Step
+direction = 20
+step = 21
+GPIO.setup(int(direction),GPIO.OUT) # Direction
+GPIO.setup(step,GPIO.OUT) # Step
 
 
 
 #### Setting up direction
-direction = 'left'
+rotation = 'left'
 
-if direction== 'left':
-    GPIO.output(27,True)
+if rotation == 'left':
+    GPIO.output(int(direction),True)
 else:
-    GPIO.output(27,False)
+    GPIO.output(direction,False)
 
 
 #### Steps
 
-for i in range(10):
-    GPIO.output(17,True)
-    sleep(10)
-    GPIO.output(27,False)
-    sleep(10)
+for i in range(100):
+    GPIO.output(step,True)
+    sleep(0.5)
+    GPIO.output(step,False)
+    sleep(0.5)
 
     
 

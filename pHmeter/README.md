@@ -1,5 +1,12 @@
 # pH meter 
 
+There are 2 possible set-ups.
+
+1) Vernier phMeter
+2) Circuit with i2c protocol
+
+# 1. Vernier
+
 Note, it is the same set up as the thermometer.
 
 ## Materials:
@@ -44,6 +51,10 @@ Note, it is the same set up as the thermometer.
 * Check the temperature of the chip - there is a chance that you will burn it, which is bad for your experimental setup.
 * Be careful with the chip. Pins tend to break when touched with bare hands, or even just stared at for too long 
 
+
+# 2. Atlas scientific
+
+https://myhydropi.com/connecting-a-ph-sensor-to-a-raspberry-pi
 
 References:
 
